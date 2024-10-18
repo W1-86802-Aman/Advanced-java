@@ -7,25 +7,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
-public class Sb01Assignment1Application implements CommandLineRunner {
+public class Sb01Assignment1Application  {
 
 	public static void main(String[] args) {
-		SpringApplication.run(Sb01Assignment1Application.class, args);
-	}
-    @Autowired
-    private ApplicationContext ctx;
-	@Override
-	public void run(String... args) throws Exception {
-		
+		ApplicationContext ctx=SpringApplication.run(Sb01Assignment1Application.class, args);
+		 Sender tcpSender = ctx.getBean(TcpSender.class);
+	        Sender httpSender = ctx.getBean(HttpSender.class);
+	        Sender udpSender = ctx.getBean(UdpSender.class);
 
-        Sender tcpSender = ctx.getBean(TcpSender.class);
-        Sender httpSender = ctx.getBean(HttpSender.class);
-        Sender udpSender = ctx.getBean(UdpSender.class);
-
-        tcpSender.send(10.5);
-        httpSender.send(20.5);
-        udpSender.send(30.5);
-		
+	        tcpSender.send(10.5);
+	        httpSender.send(20.5);
+	        udpSender.send(30.5);
 	}
 
 }
