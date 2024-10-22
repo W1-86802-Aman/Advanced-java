@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
+<h1> bye,<c:out value="${username}"></c:out></h1>
    <h2>Thank You!</h2>
 	<p>
 		<a href="index">Click Here</a> to Login again.

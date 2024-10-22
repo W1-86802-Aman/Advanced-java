@@ -8,6 +8,7 @@
 <title>cart</title>
 </head>
 <body>
+<h1> Hello,<c:out value="${username}"></c:out></h1>
 <h2>Shopping Cart</h2>
 	<table border="1">
 		<thead>

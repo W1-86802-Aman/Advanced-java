@@ -35,6 +35,7 @@ public class LoginControllerImpl {
 	   
 	   List<Book> cart=new ArrayList<Book>();
 	   session.setAttribute("cart", cart);
+	   session.setAttribute("username", cust.getName());
 	   return "redirect:subjects";
    }
    

@@ -8,6 +8,7 @@
 <title>books</title>
 </head>
 <body>
+<h1> Hello,<c:out value="${username}"></c:out></h1>
   <h1>Books</h1>
   <form method="post" action="addcart">
     <c:forEach var="b" items="${bookList}">
